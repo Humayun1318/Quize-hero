@@ -13,6 +13,7 @@ let quizContainer = document.querySelector("#quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
 
+// event handler for the blog page
 document.getElementById("blog").addEventListener("click", function () {
   window.open("blog.html", "_blank");
 })
