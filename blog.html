@@ -36,67 +36,66 @@
           <p class="text-base font-normal">
            <span class=" text-red-500">map()</span> creates a new array with the results of 
             calling a provided function on every element in the calling array. It returns a new array 
-            with the same length as the original array.<br><br> 
-            The main purpose of the DOM is that it gives us
-            a dynamic user interface which contains a lot of activities from the
-            user on the Web without requiring a full page reload. It gives us
-            flexibility for programs to dynamically access and manipulate the
-            content, structure, and style of a web page. Also we see that the
-            developers create an interactive web page where they can respond to
-            user input and change their appearances.
+            with the same length as the original array.<br> 
+            <span class="text-red-500">filter()</span> creates a new array with all elements 
+             that pass the test implemented by the provided function. It returns a new array with only 
+             the elements that satisfy the condition. <br>
+             <span class="text-red-500">find()</span> returns the value of the first element in the array that 
+              satisfies the provided testing function. It returns undefined if no element satisfies the condition.
+              <br>
+            <span class="text-red-500">forEach()</span> executes a provided function once for each array element. It does not
+             return anything.
           </p>
         </div>
         <div class="md:px-12 pb-12">
           <h5 class="mb-4 font-bold text-xl">
-            2.How will you select HTML elements using DOM? Name the DOM methods
+            2.What is the difference between <span class="text-red-500">localStorage</span>,
+           <span class="text-red-500">sessionStorage</span>, and <span class="text-red-500">cookies</span> ?
           </h5>
           <p class="text-base font-normal">
-            We can use several ways to select the HTML elements using DOM. Here’s the  few most common 
-             methods to select the HTML elements.
-            <ul class="list-disc mt-2">
-                <li>getElementById(): This method is used for the ID. We can select any html elements by 
-                     using a unique ID.</li>
-                <li>getElementsByClassName(): This method is used for class names. When we use this 
-                 method by using a class name it gives us a return array-like object of all elements</li>
-                <li>getElementsByTagName(): This method is used for html tag names. We can select from 
-                     the HTML document by using their tag names. And it also gives us the full content of 
-                      that tag like-array object.</li>
-                <li>querySelector(): This method is used for CSS selector. We select any elements like a 
-                     CSS selector.</li>
-                <li>querySelectorAll(): This is also used for CSS selectors but it gives us a nodelist 
-                     containing all elements of this selector. </li>
-            </ul>
+            <span class="text-red-500">localStorage</span>:- localStorage is a property that allows JavaScript sites and 
+             apps to save key-value pairs in a web browser with no expiration date. This means the data stored in the browser will 
+             persist even after the browser window is closed. <br>
+             <span class="text-red-500">Session Storage</span>:- Session storage allows you to store data in the browser depending
+             on the system memory and the data stored in the browser until the browser is closed. <br>
+             <span class="text-red-500">cookie</span>:- A cookie is a piece of data from a website that is stored within a web
+             browser that the website can retrieve at a later time. 
+            
             
           </p>
         </div>
       </section>
       <section class="bg-sky-200 pt-12 rounded-md px-2 mx-2">
         <div class="md:px-12 pb-12">
-          <h5 class="mb-4 font-bold text-xl">3.What is an event bubble?</h5>
+          <h5 class="mb-4 font-bold text-xl">3.What is <span class="text-red-500"> Event Loop </span> ? How does it Work ?</h5>
           <p class="text-base font-normal">
-            Event Bubble is a concept that occurs in a particular element in the
-            Document Object Model (DOM) and at the same time it triggers on all
-            of the parent elements in a sequential order. <br><br> This is the “bubbling
-            up” through the DOM tree. When a Button trigger The event handler on
-            an element is first performed by the browser when an event is
-            triggered on that element, and the event is then propagated to the
-            parent element. This procedure keeps on until the event reaches the
-            document , which is the topmost element in the DOM tree.
+            <span class="text-red-500">Event loop</span> is a loop that continually checks the message queue for
+           new events and executes them one by one in the order they are received. Each event is processed synchronously,
+           meaning that each event must finish executing before the next event in the queue can be processed.
+           Events can be added to the message queue from various sources, such as user interactions (like clicking a
+           button), network requests, or timer events. When an event is added to the message queue, the event loop checks
+           if there is any code currently executing. If there is no code executing, the event loop dequeues the event from
+           the message queue and executes its associated callback function. If there is code executing, the event loop
+           waits until the code has finished executing before dequeuing and processing the next event in the queue.
           </p>
         </div>
         <div class="md:px-12 pb-12">
           <h5 class="mb-4 font-bold text-xl">
-            4.What is a callback function and why will you use it?
+            4.Function work of <span class="text-red-500"> chooseQuiz</span> and <span class="text-red-500"> quizTimer </span>
           </h5>
           <p class="text-base font-normal">
-            Callback function is a type of function that uses a function as a
-            parameter to another function.It is subsequently called inside the
-            inner function to carry out a certain task. <br><br> I would use the Callback
-            function to adjust a function's behaviour without directly changing
-            its source code. And also a callback function can be used to handle
-            the response once it becomes available and using this callback
-            function we can create more dynamic and adaptable programs that can
-            handle a wide range of use cases.
+            <span class="text-red-500">chooseQuiz()</span> This function, chooseQuiz, takes two arguments: an index and
+            givenAns.It first checks if there is an existing answer in the answers array that matches the ID of the quiz at the 
+            given index in quizData. If there is, it updates the existing answer with the new givenAns value. If there is no
+            existing answer, it creates a new answer object with the quiz information from quizData and the givenAns value,
+            and adds it to the answers array. 
+            Finally, the function calls the displayAnswers function with the updated answers array.
+            <span class="text-red-500">quizTimer()</span> This function, quizTimer, takes one argument,dismiss.
+             If dismiss is true, the function clears the interval timer and returns.If dismiss is not true, the function sets the 
+            interval timer to run every second. Within this interval function,it calculates the minutes and seconds left in the 
+            quiz and displays them in the HTML element with the ID count.It also updates the count variable to keep track of the 
+            elapsed time.If more than 60 seconds have passed, the function alternates between adding and removing classes to 
+            change the color of the timer display.
           </p>
         </div>
       </section>
